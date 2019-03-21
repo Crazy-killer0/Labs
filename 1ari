@@ -1,0 +1,51 @@
+#alphabet = str(input("Entrer l'alphabet : "))
+#keyLeft = alphabet.split()
+#keyLeft = " ".join([str(i) for i in keyLeft])
+
+alphabetcrypt = str(input("Entrer l'alphabet crypté : "))
+keyright = alphabetcrypt.split()
+keyright = " ".join([str(i) for i in keyright])
+keyleft = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+
+
+
+#print(keyLeft[5])
+#print(keyright[2])
+
+#text = str(input('Entrer message à crypté:'))
+#def convertLetters(text):
+    #text = text.replace(" ", "")
+   # translation_table = dict.fromkeys(map(ord, '!@#$'), None)
+   # text = text.translate(translation_table)
+   # text = (text.upper())
+
+    #Encode en ASCII pour ne plus avoir les caractere speciaux
+
+  #  text = " ".join([str(i) for i in text])
+ #   text = text.split()
+ #   print(text)
+
+#convertLetters
+
+def generateKey(keyleft):
+    import random
+    random.shuffle(keyleft)
+    print(keyleft)
+generateKey(keyleft)
+
+i = int(input('entier compris entre 0 et 25:'))
+while i>25 or i<0:
+    i = int(input('entier compris entre 0 et 25:'))
+
+def shiftLeft(keyleft,i):
+
+    l1 = keyleft[i]
+    n1 = keyleft.index(l1)
+    l1 = keyright[n1]
+    print(l1)
+
+    print(keyright[0])
+
+print(keyright)
+shiftLeft(keyleft, i)
+
